@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the dashboard</h1>
+
+<form id="change-password-form">
+  <label for="old-password">Old Password:</label>
+  <input type="password" id="old-password" required>
+  <label for="new-password">New Password:</label>
+  <input type="password" id="new-password" required>
+  <label for="confirm-new-password">Confirm New Password:</label>
+  <input type="password" id="confirm-new-password" required>
+  <button type="submit">Change Password</button>
+</form>
+
+<button id="logout-btn">Logout</button>
+
+<script>
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!currentUser) {
+    window.location.href = "login.html";
+  }
+
+  const changePasswordForm = document.getElementById("change-password-form");
+
+  changePasswordForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const oldPassword = document.getElementById("old-password").value;
+    const newPassword = document
+  });
+</script>
+</body>
+</html>
+
+
